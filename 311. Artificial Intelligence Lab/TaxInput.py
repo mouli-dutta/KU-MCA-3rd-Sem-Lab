@@ -3,9 +3,9 @@ def get_tax(income):
 
     if income < 10_000: # 0% tax
         tax = 0 
-    elif income > 10_000 and income < 50_000: # 5% tax
+    elif 10_000 < income < 50_000: # 5% tax
         tax = income * 0.05 
-    elif income > 50_000 and income < 1_00_000: # 10% tax
+    elif 50_000 < income < 1_00_000: # 10% tax
         tax = income * 0.1 
     else: # 15% tax
         tax = income * 0.15 
