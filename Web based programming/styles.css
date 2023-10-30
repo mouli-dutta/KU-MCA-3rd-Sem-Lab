@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-image: linear-gradient(#110B30, #0E0520);
+    height: 70px;
+    width: 100%;
+    line-height: 80px;
+    padding: 0px 100px;
+    overflow: hidden;
+    /* position: fixed;
+    z-index: 2; */
+    border-bottom: 4px solid #100D12;
+}
+
+.navbar-right {
+    float: right;
+}
+
+label.logo {
+    color: whitesmoke;
+    background: #64176B;
+    border-radius: 60px;
+    padding: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar a {
+    color: grey;
+    font-size: 17px;
+    padding: 0px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #B458BD;
+    transition: all .5s ease 0s;
+}
+
+.intro {
+    top: 0;
+    left: 0;
+    min-height: 60vh;
+    width: 100%;
+    height: 480px;
+    position: static;
+    border-bottom: 4px solid #100D12;
+} 
+
+.blurred-image {
+    min-height: 55vh;
+    width: 100%;
+    height: 480px;
+    filter: blur(4px); 
+    transform: scale(1.1);
+    transform-origin: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.intro .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.intro p{
+    color: whitesmoke;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: #B458BD;
+    font-weight: bold;
+}
+
+.btn {
+    width: fit-content;
+    background: #64176B;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #B458BD;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.about-me {
+    background: #0E0520;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 4px solid #100D12;
+}
+
+.about-me p {
+    color: white;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.my-photo {
+    max-width: 50%;
+    height: 380px;
+    margin-right: 40px;
+    border: 3.5px solid #64176B;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 40px;
+    width: fit-content;
+    text-align: center;
+    color: azure;
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid #64176B;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h3:hover {
+    background: #64176B;
+}
+
+.skills {
+    background: #221833;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    border-bottom: 4px solid #100D12;
+}
+
+.box {
+    width: 190px;
+    height: 190px;
+    background-color: #0E0520;
+    color: antiquewhite;
+    margin: 15px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 40px;
+    border-left: 2px solid #B458BD;
+}
+
+.small-text {
+    color: whitesmoke;
+    font-size: small;
+    margin-top: 25px;
+}
+
+.contact-me {
+    background: #2d2140;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    border-bottom: 4px solid #100D12;
+}
+
+.contact-box {
+    padding: 5px;
+    font-size: 16px;
+    border: 3px solid #110B30;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.contact-box:focus {
+    background-color: azure;
+    border: 2px solid #B458BD;
+    outline: none;
+}
+
+footer {
+    padding: 20px;
+    background: #362b4b;
+    color: #aaa;
+    line-height: 30px;
+    text-align: center;
+}
