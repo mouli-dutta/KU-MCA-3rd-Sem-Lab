@@ -1,58 +1,40 @@
 import random
 
 def genRandList():
-    list = []
-    for i in range(1, 11):
-        list.append(random.randint(0, 1))
-    return list
+    return [random.randint(0, 1) for _ in range(10)]
 
 def genPopulation():
-    population = []
-    for i in range(1, 21):
-        population.append(genRandList())
-    return population
-
+    return [genRandList() for _ in range(20)]
 
 def crossOver(chromosome1, chromosome2):
     listC = chromosome1[0:5] + chromosome2[5:]
     listD = chromosome1[5:] + chromosome2[0:5]
-    
     return [listC, listD]
 
-
 def mutation(chromosome):
-    probability = 0.05
+    probability = 0.0005  # Adjusted probability to 0.05%
     res = random.random()
-    #print("random res", res)
-
     index = random.randint(0, 9)
 
-    if (res < probability):
-        original = chromosome[index]
-        #print("original", original)
-        flip = original ^ 1
-        chromosome[index] = flip
-
-        #print("chrom[inx]", chromosome[index])
-
+    if res < probability:
+        chromosome[index] ^= 1
 
 def generation():
     parent = genPopulation()
-    childPopulation = []
-    mutatedPopulation = []
 
-    for i in range(25):
+    for _ in range(25):
+        childPopulation = []
+        mutatedPopulation = []
 
         for i in range(len(parent)-1):
             childPopulation.append(crossOver(parent[i], parent[i+1]))
 
         for childPop in childPopulation:
-            mutation(childPop)
-            mutatedPopulation.append(childPop)
-        
+            mutation(childPop[0])
+            mutation(childPop[1])
+            mutatedPopulation.extend(childPop)
+
         parent = mutatedPopulation
-
-
 
 def main():
     c1 = genRandList()
@@ -60,4 +42,7 @@ def main():
     mutation(c1)
     print(c1)
 
-main()
+if __name__ == "__main__":
+    main()
+    generation()
+    
