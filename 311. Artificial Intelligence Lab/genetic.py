@@ -12,7 +12,7 @@ def crossOver(chromosome1, chromosome2):
     return [listC, listD]
 
 def mutation(chromosome):
-    probability = 0.0005  # Adjusted probability to 0.05%
+    probability = 0.0005  # probability 0.05%
     res = random.random()
     index = random.randint(0, 9)
 
